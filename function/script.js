@@ -80,3 +80,18 @@ const subtraction= (a, b) =>{
 const minus = subtraction(12,4);
 console.log(minus);
 
+
+// nested function 
+function getScore(){
+    const num1 = 2;
+    const num2 = 3;
+    const name = "dlt africa"
+
+    function add() {
+            return `${name} is ${num1 + num2} years old`
+    }
+    return add ();
+}
+
+console.log
+
