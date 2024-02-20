@@ -44,3 +44,31 @@ const name = "hayzed"
 console.log(name.length)
 
 console.log(name[0])
+
+//changing the case of string
+const words = "i am a boy"
+console.log(words.toUpperCase())
+
+const word = "SHE IS A GIRL"
+console.log(word.toLowerCase())
+
+// checking for substring .... to know where a word starts from
+const man = "i love coding and my favorite language is javascript"
+const final = man.indexOf('javascript')
+const main = man.lastIndexOf('my')
+
+
+
+console.log(main)
+console.log(final)
+
+const check = man.includes('favourite')
+
+const starting = man.startsWith('I')
+const ending = man.endsWith('t')
+
+
+
+console.log(check)
+console.log(starting)
+console.log(ending)
