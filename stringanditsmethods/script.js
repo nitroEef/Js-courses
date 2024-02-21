@@ -72,3 +72,16 @@ const ending = man.endsWith('t')
 console.log(check)
 console.log(starting)
 console.log(ending)
+
+// getting a sub string using slice
+
+const exampleString = "hotDog"
+console.log(exampleString.slice(0,5))
+console.log(exampleString.slice(3))
+console.log(exampleString.slice(-1))
+
+
+//split method
+
+const sentenceOne = "the quick brown fox jumped over the lazy dog ";
+console.log(sentenceOne.split(' '))
