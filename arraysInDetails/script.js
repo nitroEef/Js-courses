@@ -44,7 +44,14 @@ console.log(object)
 
 const arr = [
     "banana",
-    10000,
+    10000,{
+        name : "bala blu",
+        age : 80
+    },
+
+    function name() {
+        alert("boooooooom")
+    }
 ]
 
 // push method 
