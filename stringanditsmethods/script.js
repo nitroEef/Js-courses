@@ -85,3 +85,9 @@ console.log(exampleString.slice(-1))
 
 const sentenceOne = "the quick brown fox jumped over the lazy dog ";
 console.log(sentenceOne.split(' '))
+
+// reverse and join method 
+const month  = "july and may"
+const split1 = month.split(' ')
+console.log(split1)
+
