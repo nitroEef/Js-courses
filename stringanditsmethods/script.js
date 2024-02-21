@@ -89,5 +89,22 @@ console.log(sentenceOne.split(' '))
 // reverse and join method 
 const month  = "july and may"
 const split1 = month.split(' ')
-console.log(split1)
+console.log(split1);
+
+
+const  reverse$ = split1.reverse()
+console.log(reverse$);
+
+const join1 = reverse$.join( '-')
+console.log(join1)
+
+
+
+//repeat method
+
+const dogSays = "woof "
+console.log(dogSays.repeat(2))
+
+
+//trim() method
 
