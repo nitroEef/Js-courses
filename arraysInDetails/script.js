@@ -97,12 +97,26 @@ console.log(months)
 
 
 
-// /************splice()***********/ this is to add the first element of the array
+// /************splice()***********/ this is to add and removeelement of the array
+// three parameters 
+// the element u want to add
 const countries = ["kenya", "malaysia", "canada", "Qatar","niger"]
 console.log(countries)
-countries.splice (3, 2, "egypt", "ghana")
+countries.splice (3, 1, "egypt", "ghana","morrocco")
 console.log(countries)
 
 
+// one para where the new element will replace
+
+const wears = ["gucci", "versace","dg", "nike", "louis"]
+console.log(wears);
+
+wears.splice(2)
+console.log(wears)
+
+
+// 2 parameters example , number of element u want to replace and delete
+const drinks = ["coke", "viju","gin", "exotic", "bobo"];
+console.log(2,1)
 
 
