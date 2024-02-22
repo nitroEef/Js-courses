@@ -218,8 +218,90 @@ console.log(_names)
 
 // /**************foreach()***********/
 _names.forEach(function() {}) 
-_names.forEach(() => {})
 
 
 
+
+// _names.forEach((name, i ,arr) => {
+//     console.log(name);
+
+
+_names.forEach((name, i, arr) => {
+    console.log(name.toUpperCase());
+    // console.log(i)
+    // console.log(arr);
+});
+
+const _$numbers = [2, 4, 3, 1, 2, 4];
+_$numbers.forEach(function(number, i){
+    console.log(number)
+});
+
+
+
+const mammals = ["Lion", "Cow", "Dog", "Cat"]
+
+mammals.forEach((mammal, i) => {console.log(mammal, i)} )
+
+//EXAMPLE
+let totalVal = 0;
+const trans = [42, 45, 26, 4, 13,16];
+
+trans.forEach((tran)=>{
+    console.log(totalVal, (totalVal += tran),tran)
+})
+console.log(totalVal);
+
+//example 4
+_names.forEach((name) => console.log(`congratulations ${name} una dey smoke igbo `))
+
+
+
+
+// /MAP METHOD
+//EXAMPLE 1
+
+const inventory = [
+    {name:"rice",price:"4000"},
+    {name:"beans",price:"4000"},
+    {name:"semo",price:"4000"},
+    {name:"yam",price:"4000"},
+    {name:"Garri",price:"4000"}
+
+]
+
+const price = inventory.map((value)=>{
+    return value.price
+})
+console.log(price)
+
+// const NAMES = inventory.map((value))=>
+// console.log(commodity)
+const naMes = inventory.map((value) => {
+    return value.name;
+})
+
+console.log(naMes);
+
+
+// const tag = [
+//     {
+//         tab:1,
+//         tab:2,
+//         tab:3,
+//         tab:4,
+//         tab:5,
+//         tab:6,
+//         tab:7
+
+//     }]
+
+//     const tab = inventory.man((value)=>{
+//         return value.tab
+//     })
+let double = [2,3,4,5,6,7]
+let double$ = double.map((numb)=> {
+    return numb * 2
+})
+console.log(double$)
 
