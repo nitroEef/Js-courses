@@ -146,4 +146,14 @@ const newName = myName.slice(2,5)
 console.log(newName)
 
 
+const BaddestMen = men.slice (2,5)
+console.log(BaddestMen)
+
+
+const coolestamong = men.slice(4)
+console.log(coolestamong)
+
+
+/**************to string()***********/
+
 
