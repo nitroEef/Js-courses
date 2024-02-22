@@ -80,7 +80,7 @@ console.log(mul)
 // it is used to change comdition if the condition is either true or false 
 const isBeautiful = false;
 
-if (!isBeautiful) {console.log("this woman is beautiful")
+if (isBeautiful) {console.log("this woman is beautiful")
     
 } else 
     {console.log("this woman is ugly")
@@ -93,10 +93,11 @@ console.log(age);
 
 //undefined
 
-let x;
+let x ;
 console.log(x)
 
 // symbol 
 const value1 = Symbol("hello");
 const value2 = Symbol("hello");
 console.log(value1.description);
+

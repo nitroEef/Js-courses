@@ -46,8 +46,8 @@
 // result = a < b
 // console.log(result)
 
-// result = a===b
-// console.log(result)
+let resultt = 15 === 5
+console.log(resultt)
 
 // less than or equal to
 // result = a <= b    
@@ -55,8 +55,8 @@
 
 // greater than or equal to
 
-// result = a >= b
-// console.log(result)
+let rresult = 3 >= 2
+console.log(rresult)
 
 // not equal to 
 // result = a!=b 
@@ -83,3 +83,5 @@
 // console.log(answer)
 
 
+let result =12 % 3
+console.log(result)

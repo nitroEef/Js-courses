@@ -9,7 +9,8 @@ console.log(cohort);
 const change = (cohort[1] = "Bash")
 cohort[6] = "thewy"
 
-// my own
+// my own..
+
 // for (let i = 0; i < cohort.length; i++) {
 // console.log(cohort[i])}
 
