@@ -169,3 +169,29 @@ console.log(nate)
 men.sort();
 console.log(men)
 
+const Alph = ["g", "f", "k", "a", "b", "z"]
+Alph.sort();
+console.log(Alph)
+
+const number = [3,4,3,2,42,55,32]
+number.sort();
+console.log(number)
+
+
+// ()=>{} call back function 
+numbers.sort((a,b) => a - b);
+numbers.sort((a,b) => b - a) ;
+console.log(numbers)
+
+
+// /**************indexof()**********/
+
+const $number = [1,4,3,6,2,9,8,2,4,7,5,2]
+console.log($number);
+
+const index1 = $number.indexOf(2);
+console.log(index1);
+
+
+
+
