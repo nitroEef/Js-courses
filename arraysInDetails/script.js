@@ -106,6 +106,12 @@ countries.splice (3, 1, "egypt", "ghana","morrocco")
 console.log(countries)
 
 
+const championsLeagueSemifinal = ["arsenal","barcelona", "realmadrid","bayern"]
+console.log(championsLeagueSemifinal)
+ championsLeagueSemifinal.splice (0,1, "napoli")
+console.log(championsLeagueSemifinal)
+
+
 // one para where the new element will replace
 
 const wears = ["gucci", "versace","dg", "nike", "louis"]
@@ -117,6 +123,27 @@ console.log(wears)
 
 // 2 parameters example , number of element u want to replace and delete
 const drinks = ["coke", "viju","gin", "exotic", "bobo"];
-console.log(2,1)
+drinks.splice(2,1)
+console.log(drinks)
+
+
+/**************slice()***********/
+const men =["tunmise", "kenny", "soliu", "bode","abee", "az"]
+console.log(men)
+const newGuy = men.slice(1,5)
+console.log(newGuy)
+
+
+const newString = "nafeesah"
+console.log(newString.length);
+const newSlice = newString.slice(2,5)
+console.log(newSlice)
+
+
+const myName = "lateef"
+console.log(myName)
+const newName = myName.slice(2,5)
+console.log(newName)
+
 
 

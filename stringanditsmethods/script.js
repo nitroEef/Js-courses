@@ -75,7 +75,7 @@ console.log(ending)
 
 // getting a sub string using slice
 
-const exampleString = "hotDog"
+const exampleString = "Nafeesah"
 console.log(exampleString.slice(0,5))
 console.log(exampleString.slice(3))
 console.log(exampleString.slice(-1))
