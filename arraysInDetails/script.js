@@ -184,13 +184,41 @@ numbers.sort((a,b) => b - a) ;
 console.log(numbers)
 
 
-// /**************indexof()**********/
+// /**************indexof()**********/ counting from the beginning of an eleent from zero..
+// it is used to search the first occurence 
 
 const $number = [1,4,3,6,2,9,8,2,4,7,5,2]
 console.log($number);
 
-const index1 = $number.indexOf(2);
+const index1 = $number.indexOf(3);
 console.log(index1);
+
+const tutor = ["abdullah" , "naheem", "anate", "seyi", "soliu"]
+console.log(tutor);
+
+const indextt = tutor.indexOf("ane")
+console.log(indextt)
+
+const lastIndex = $number.lastIndexOf(2);
+console.log(lastIndex)
+
+
+// /**************loop()***********/ 
+const _names = ['zainab','basirat', 'nafeesah']
+
+// /**************(es5)***********/ 
+
+for (let i = 0; i <_names.length; i++) {
+    console.log(i, _names[i])
+}
+// /**************(es6)***********/ 
+for(const _name of _names)
+console.log(_names)
+
+
+// /**************foreach()***********/
+_names.forEach(function() {}) 
+_names.forEach(() => {})
 
 
 
