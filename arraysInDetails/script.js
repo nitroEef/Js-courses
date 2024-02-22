@@ -155,5 +155,17 @@ console.log(coolestamong)
 
 
 /**************to string()***********/
+const menSting = men.toString()
+console.log(menSting)
 
+const text = menSting.includes("life")
+console.log(text)
+
+const nate = menSting.includes("abee")
+console.log(nate)
+
+
+// /**************sort()***********/ to show them alphabetically 
+men.sort();
+console.log(men)
 
