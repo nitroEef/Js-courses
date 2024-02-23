@@ -49,3 +49,7 @@ console.log(`what will i eat, if not ${food} ?`);
 let A = 2;
 A *= 4;
 console.log(A)
+
+
+let mon = 'ufubfubfu'
+console.log(`life ti waniyen${ mon}`)
