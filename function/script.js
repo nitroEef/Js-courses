@@ -18,7 +18,7 @@ square()
 
 
 // function expression
-const nameFunction = function(params) {}
+const nameFunction = function(params) {}  
 
 
 //arrow function
