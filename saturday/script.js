@@ -74,4 +74,4 @@ const checkLeap = (year) => {
 const answer = checkLeap(2000)
 
 alert(answer);
-// console.log(answe
+// console.log(answer 
