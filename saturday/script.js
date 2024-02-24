@@ -54,4 +54,5 @@ for (let index = 0; index < num; index++){
 //checking for a leap year
 //conditions
 //the year divided by 4 should have a remainder of zero
-//the year divided by 4 should not have a remainder of zero
+//the year divided by 100  should have a non zero remainder 
+//if divided by 100 gives no remainder, then divided by 400
