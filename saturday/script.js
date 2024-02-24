@@ -55,4 +55,23 @@ for (let index = 0; index < num; index++){
 //conditions
 //the year divided by 4 should have a remainder of zero
 //the year divided by 100  should have a non zero remainder 
-//if divided by 100 gives no remainder, then divided by 400
+//if divided by 100 gives no remainder, then divided by 400 should give a remainder
+
+const year = prompt("Enter the year");
+
+const checkLeap = (year) => {
+    let result;
+    if((year % 4 === 0 && year % 100 !== 0) || (year % 4 === 0 && year % 100 === 0 && year % 400 === 0)) {
+        result = "Yes! it is a leap year";
+    }
+    else{
+        result = "No! it is not a leap year"
+    }
+
+    return result;
+}
+
+const answer = checkLeap(2000)
+
+alert(answer);
+// console.log(answe
