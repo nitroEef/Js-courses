@@ -343,11 +343,28 @@ const employees =[
 // console.log(employeesToReward)
 
 
+
+//second example
 const employeesToReward = employees.filter
 ((employee) => {
-
-    return employee.name >= 7 
+    return employee.overtime >= 7 
     
 })
 
+
+//third example
+const employeesToRewardNames = employeesToReward.map((employee) => {
+    return employee.name
+})
 console.log(employeesToReward)
+console.log(employeesToRewardNames)
+
+
+// employeesToRewardNames = forEach((name) => {
+// console.log(`${name},you are congratulated`))
+// }
+
+
+employeesToRewardNames.forEach((name) => {
+    console.log(`hi${name},you are congratulated`)
+    })
