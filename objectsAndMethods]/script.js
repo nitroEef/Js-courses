@@ -15,3 +15,16 @@ const person ={
     } 
 }
 console.log(person)
+
+
+
+//assessing and adding of properties to an object
+const human = {
+    firstName : 'Abdullah' 
+}
+
+human.pet = {name:"cobra", age:3}
+human.job = "headmaster"
+human.favFood = "garri"
+console.log(human)
+console.log(human.firstName)
