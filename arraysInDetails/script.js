@@ -489,4 +489,7 @@ console.log(box.every((el) => {return el > 4}))
 //value. the call back function take two parameters which are accululator and value .
 
 const boxes= [1,2,3,4,5,6,7,8,9,10]
+const answer = boxes.reduce((accumulator, value) => {
+    return accumulator + value
+},0)
 
