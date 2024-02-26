@@ -368,3 +368,27 @@ console.log(employeesToRewardNames)
 employeesToRewardNames.forEach((name) => {
     console.log(`hi${name},you are congratulated`)
     })
+
+    // loop method for the above example 
+    for (let i = 0; i < employeesToRewardNames.length; i++) {
+        console.log(`${employeesToRewardNames[i]}, you have received an award`);
+    }
+
+    //another example
+
+    const creatures = [
+        {animal:"shark", habitat:"ocean"},
+        {animal:"whale", habitat:"ocean"},
+        {animal:"Hippopotamus", habitat:"lake"},
+        {animal:"lion", habitat:"savannah"},
+        {animal:"monkey", habitat:"jungle"},
+    ]
+
+    const aquaticAnimals = creatures.filter((creature) => {
+return creature.habitat === "ocean" || creature.habitat === "lake" 
+    })
+    console.log(aquaticAnimals)
+
+
+
+    
