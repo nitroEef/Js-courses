@@ -45,3 +45,12 @@ const pet = {
     }
 }
 pet.petSound()
+
+//another example
+const dog = {
+    name : "fluffy",
+    age : 2,
+    listAllProperties:function(){
+        console.log(this.name, this.age)
+    }
+}
