@@ -305,3 +305,49 @@ let double$ = double.map((numb)=> {
 })
 console.log(double$)
 
+
+//array filter
+
+const digit = [-10, 0, -2, 4,-9, 5, -8]
+const filteredDigit = digit.filter((number) => {
+return number < 0 
+} )
+console.log(filteredDigit)
+
+// //using filter for loop
+const Filterednumber = []
+for (let i = 0; i < digit.length; i++){
+    if (digit[i] < 0){
+        Filterednumber.push(digit[i])
+    }
+}
+
+console.log(Filterednumber)
+
+const employees =[
+   { name : "mohmmed", overtime:10},
+   { name : "Aisha", overtime:5},
+   { name : "Bolaji", overtime:4},
+   { name : "Chris", overtime:7},
+   { name : "Ben", overtime:9},
+   { name : "Munirat", overtime:12},
+
+]
+
+// const employeesToReward = employees.filter
+// ((employee) => {
+//     return employee.overtime >= 7 
+    
+// })
+
+// console.log(employeesToReward)
+
+
+const employeesToReward = employees.filter
+((employee) => {
+
+    return employee.name >= 7 
+    
+})
+
+console.log(employeesToReward)
