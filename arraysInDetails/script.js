@@ -453,6 +453,10 @@ const studentS = [
     {name: "Tunmise", score: 9},
 ]
 
+
+
+
+
 const studentAboveFromSix = studentS.filter((student) => {
     if (student.score > 6 && student.score <= 10) {
         return student.score;
@@ -460,11 +464,29 @@ const studentAboveFromSix = studentS.filter((student) => {
     
 })
 
-const rewardStudents = studentAboveFromSix.map((student) => {
-    return student.name;
+// const rewardStudents = studentAboveFromSix.map((student) => {
+//     return student.name;
+// })
+
+studentAboveFromSix.forEach((student) => {
+    console.log(`Hi ${student.name}, here is your reward for scoring above 6`)
 })
 
-rewardStudents.forEach((name) => {
-    console.log(`Hi ${name}, here is your reward for scoring above 6`)
-})
+// array some and every 
+const box = [1,2,3,4,5,6,7,]
+// some checks if some of the properties in an Array
+// meets a particular condition 
+console.log(box.some((el) => {return el > 4}))
+
+// eveery checks if all of the properties in an Array
+// meets a particular condition 
+console.log(box.every((el) => {return el > 4}))
+
+
+//array reduce
+// loops through the array and return the sum of the array. 
+//it takes two properties: a callback function and an initial 
+//value. the call back function take two parameters which are accululator and value .
+
+const boxes= [1,2,3,4,5,6,7,8,9,10]
 
