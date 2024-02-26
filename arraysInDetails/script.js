@@ -385,10 +385,29 @@ employeesToRewardNames.forEach((name) => {
     ]
 
     const aquaticAnimals = creatures.filter((creature) => {
-return creature.habitat === "ocean" || creature.habitat === "lake" 
+return creature.habitat === "ocean" || creature.habitat === "lake" || creature.habitat === "jungle" 
     })
     console.log(aquaticAnimals)
 
+    // another example 
+    const numerals = [1,2,3,4,5,6,7,8,9,]
+    const value = numerals.find((numeral) => {
+        return numeral > 4
+    })
 
+    console.log(value)
 
+    //another example
     
+    const states = [
+        "Ogun State",
+        "Kogi State",
+        "Anambra State",
+        "Lagos State",
+        "Benue State",
+    ]
+    
+    const state = states.find((state) => {
+        return state.startsWith("L");
+    })
+    console.log(state);
