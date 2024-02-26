@@ -398,7 +398,7 @@ return creature.habitat === "ocean" || creature.habitat === "lake" || creature.h
     console.log(value)
 
     //another example
-    
+
     const states = [
         "Ogun State",
         "Kogi State",
@@ -411,3 +411,60 @@ return creature.habitat === "ocean" || creature.habitat === "lake" || creature.h
         return state.startsWith("L");
     })
     console.log(state);
+
+    // a student assesment took place
+    // with a total mark of 10, give us 
+    // seven students and mark them over 10, 
+    // now give a reward to each students with a
+    // score over the mark of 6
+
+    // const nurseryTwo= [
+    //     {tagname:"tayo", score:"6"},
+    //     {tagname:"bolu", score:"1"},
+    //     {tagname:"jide", score:"5"},
+    //     {tagname:"toyo", score:"9"},
+    //     {tagname:"kessi", score:"7"},
+    //     {tagname:"jimi", score:"4"},
+    //     {tagname:"presh", score:"2"},
+
+
+    // ]
+
+    // const sabiStudents = nurseryTwo.filter
+    // ((nursery) => {
+    //    return nursery.score > 6
+    // })
+
+    // console.log(nurseryTwo)
+    // console.log(sabiStudents)
+    // sabiStudents.forEach((nursery) => {
+    //     console.log(`Hi ${nursery}, Excellent and good of you, you scored above 6marks.`)
+    //  })
+
+
+
+const studentS = [
+    {name: "Soliu", score: 4},
+    {name: "Hayzed", score: 7},
+    {name: "Kenny", score: 3},
+    {name: "Eef", score: 8},
+    {name: "Abdullahi", score: 2},
+    {name: "Zainab", score: 5},
+    {name: "Tunmise", score: 9},
+]
+
+const studentAboveFromSix = studentS.filter((student) => {
+    if (student.score > 6 && student.score <= 10) {
+        return student.score;
+    }
+    
+})
+
+const rewardStudents = studentAboveFromSix.map((student) => {
+    return student.name;
+})
+
+rewardStudents.forEach((name) => {
+    console.log(`Hi ${name}, here is your reward for scoring above 6`)
+})
+
