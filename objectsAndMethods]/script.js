@@ -95,8 +95,8 @@ const employees ={
 }
 
 
-const employeesInfos = object.keys(employees)
-console.log(employeesInfos)
+const employeesInfos = Object.keys(employees)
+console.log(employeesInfos);
 
 
 //object.value()
@@ -108,8 +108,8 @@ const session ={
     browser : "chrome",
 }
 
-const sessionValue= object.value(session)
-console.log(sessionValue)
+const sessionValue = Object.values(session)
+console.log(sessionValue);
 
 
 
@@ -121,4 +121,35 @@ const operatingSystem ={
      version: "18-04",
      license: "open source",
  }
+
+ const operatingSystemInfo = Object.entries(operatingSystem)
+ console.log(operatingSystemInfo);
  
+
+ //freeze object
+//  it prevents modificastion of existing properties and prevent properties from being added or removed
+const user ={
+    username : "eef",
+    password: "kail4real",
+}
+
+const userinfo = Object.entries(user)
+console.log(userinfo);
+
+ //seal object
+//  it prevents new properties from being added or removed
+
+
+
+const persons = {
+    name: "Soliu",
+    age: 12 ,
+    isAdmin: true,
+    address: {
+        street: "Babayemi",
+        city:"Lagos State",
+        country: "Nigeria",
+    },
+    hobbies: ["Music", "Sport"]
+    
+}
