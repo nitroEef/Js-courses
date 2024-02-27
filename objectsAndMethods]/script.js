@@ -139,8 +139,16 @@ console.log(userinfo);
  //seal object
 //  it prevents new properties from being added or removed
 
+const user1 = {
+    name: "Bode",
+    Password:"12354",
+}
+const userInfo1 = Object.seal(user1)
+userInfo1.surname = "Sade"
+console.log(userInfo1)
 
 
+let x;
 const persons = {
     name: "Soliu",
     age: 12 ,
@@ -151,5 +159,23 @@ const persons = {
         country: "Nigeria",
     },
     hobbies: ["Music", "Sport"]
-    
 }
+//accessing an array inside object 
+
+
+x = persons.hobbies[0]
+// let y = person ["hobbies"][1]; 
+y = persons.hobbies[1]
+
+console.log(x, y)
+
+//updating a property
+persons.name = "eef"
+console.log(persons);
+
+persons.address.street = "bologba"
+console.log(persons)
+
+//to delete ..we use delete keyword
+delete persons.address.state
+console.log(person)
