@@ -194,3 +194,15 @@ person.greet();
 // // VALUE AND REFERENCE 
 // divided into two copying primitive value, copy numbers and copy strings {it is going to behave as it is expected to be, u just need to
 // see what is the value of the variable at the time of adsignment} and COPYING COMPLEX VALUE
+
+// copying numbers 
+let x1 = 2
+let y1 = x;
+
+x1 = 2
+console.log(x1)
+console.log(y1)
+
+//copying strings
+
+let firstPerson = 
