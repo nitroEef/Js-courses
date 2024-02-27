@@ -179,3 +179,13 @@ console.log(persons)
 //to delete ..we use delete keyword
 delete persons.address.state
 console.log(person)
+
+
+delete persons.address.city
+console.log(person)
+
+// it is only function expressiion that can be added to an object 
+person.greet = function () {
+    console.log(`hello, my name is ${this.name}`)
+}
+person.greet();
