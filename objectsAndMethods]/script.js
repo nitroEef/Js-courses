@@ -77,3 +77,48 @@ const animal = {
 
 console.log(animal.name);
 animal.bark()
+
+//5 types of objects
+//object.keys 
+//object.values
+// object.entries
+// object.freeze
+//object.seal
+
+//object.keys() it creates and return an array containing the keys of an object
+const employees ={
+    chairman : "deji",
+    vice : "sola",
+    auditor : "tobi",
+    manager : "toyo",
+    receptionist : "bayo",
+}
+
+
+const employeesInfos = object.keys(employees)
+console.log(employeesInfos)
+
+
+//object.value()
+// it creates and return an array containing the value of an object 
+const session ={
+   id : 1,
+    date: "27-2-2024",
+     device: "mobile",
+    browser : "chrome",
+}
+
+const sessionValue= object.value(session)
+console.log(sessionValue)
+
+
+
+
+//object.entries()
+// it creates a nested array of the key and value pairs of an object 
+const operatingSystem ={
+     name : "linux",
+     version: "18-04",
+     license: "open source",
+ }
+ 
