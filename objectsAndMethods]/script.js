@@ -205,4 +205,41 @@ console.log(y1)
 
 //copying strings
 
-let firstPerson = 
+let firstPerson = "Mark"
+let secondPerson = firstPerson
+
+firstPerson = "Austin";
+console.log(firstPerson)
+console.log(secondPerson)
+
+//copying complex value
+//copying ARRAYS
+
+const animals = ["dogs","cats"];
+const otherAnimals = animals 
+
+animals.push("goat");
+console.log(animals);
+console.log(otherAnimals);
+
+
+// COPY OBJECT
+const data = {
+    firstName: "Zainab",
+    lastName: "Muritala"
+} 
+
+const otherdata = data
+console.log(otherdata)
+
+// EQUALITY 
+const person1 = {
+   firstName: "Soliu"
+}
+const otherPerson1 = {
+    firstName: "Soliu"
+}
+console.log(person1===otherPerson1)
+
+
+
