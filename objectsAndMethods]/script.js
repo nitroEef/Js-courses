@@ -189,3 +189,8 @@ person.greet = function () {
     console.log(`hello, my name is ${this.name}`)
 }
 person.greet();
+
+
+// // VALUE AND REFERENCE 
+// divided into two copying primitive value, copy numbers and copy strings {it is going to behave as it is expected to be, u just need to
+// see what is the value of the variable at the time of adsignment} and COPYING COMPLEX VALUE
