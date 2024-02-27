@@ -3,17 +3,17 @@
 
 // asignment operator
 
-// let number = 5
-// console.log(number)
+let number = 5
+console.log(number)
 
-// number += 5
-// console.log(number)
+number += 5
+console.log(number)
 
-// let word = 2
-// console.log(word)
+let word = 2
+console.log(word)
 
-// word += ", i am  mr lateef"
-// console.log(word)
+word += ", i am  mr lateef"
+console.log(word)
 
 let temperature = 25
 if( temperature > 30) {
@@ -22,14 +22,26 @@ if( temperature > 30) {
     console.log ("it is not too hot today")
 }
 
-let hour = new Date().getHours();
-if(hour < 12) {
+// let hour = new Date().getHours();
+// if(hour < 12) {
+//     console.log("Good morning")
+// } else if (hour >= 12 && hour < 18){
+//     console.log("good afternoon")
+// }else{
+//     console.log("good evening")
+// }
+
+
+let moment = "23";
+if(moment < 12) {
     console.log("Good morning")
-} else if (hour >= 12 && hour < 18){
+} else if (moment >= 12 && moment< 18){
     console.log("good afternoon")
 }else{
     console.log("good evening")
 }
+
+
 
 
 let time = new Date().getHours();
@@ -48,7 +60,7 @@ if(time > 22) {
 
 
 
-let score = 125;
+let score = 75;
 
 if (score >= 90) {
     console.log("excellent you score an A")
@@ -70,27 +82,26 @@ else{
 }
 
 
-// switch statement 
-// let superHero = "captain America";
+// switch statements 
+let superHero = "captain America";
+switch (superHero) {
+    case'iron Man':
+    console.log("i am iron man")
+        break;
+    case 'thor':
+        console.log("that is my hammer")
+        break;
+    case 'captain America':
+        console.log ("never give up")
+        break;
+     case 'black widow':
+        console.log ("one short one kill")
+        break;
+    default:
+        console.log("enter a valid superHero username")
 
-// switch (superHero) {
-//     case'iron Man':
-//     console.log("i am iron man")
-//         break;
-//     case 'thor':
-//         console.log("that is my hammer")
-//         break;
-//     case 'captain America':
-//         console.log ("never give up")
-//         break;
-//      case 'black widow':
-//         console.log ("one short one kill")
-//         break;
-//     default:
-//         console.log("enter a valid superHero username")
-
-//         console.log(superHero)
-// }
+        console.log(superHero)
+}
 
 // let day = new date().getDate();
 // let dayName;
@@ -206,6 +217,9 @@ console.log(message)
 
 // let canVote = age >= 18 ? "yes you can vote" : "no. you can vote"
 // console.log(canVote)
+
+
+ 
 // let israining = "true"
 
 

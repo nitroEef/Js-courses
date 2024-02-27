@@ -8,4 +8,8 @@ for(let i = 0; i < 10; i++){
 for(let i = 1; i <= 8; i++){
     console.log(i)
 };
-CLS
+
+
+for(let i = 0; i < 1228; i++){
+    console.log(i)
+};

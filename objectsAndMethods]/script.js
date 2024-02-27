@@ -54,3 +54,26 @@ const dog = {
         console.log(this.name, this.age)
     }
 }
+
+dog.listAllProperties()
+
+//built in method is a property that contains a function
+
+// example 
+const myObject={
+    myMethod1: () => {},  //arrow function
+    myMethod2: function() {}, //function declarattion
+    myMethod3() {}
+};
+
+const animal = {
+    name : "fluffy orange",
+    age : 10,
+
+    bark: () => {
+        console.log("woof woof")   //built in
+    }
+}
+
+console.log(animal.name);
+animal.bark()
