@@ -1,0 +1,1 @@
+const anything = document.querySelectorAll
