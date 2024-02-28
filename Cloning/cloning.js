@@ -83,5 +83,31 @@ console.log(merged)
 
 const text = {name :"Bode"};
 const numbs = [1,2,3,4];
-const cloneMerged = {...text, number:[...numbs]}
+const cloneMerged = {...text, data:[...numbs]}
+cloneMerged.name = "az";
+cloneMerged.data.push(5);
+
+console.log(text)
+console.log(numbs)
+console.log(cloneMerged)
+
+
+//deep clone is an object in javascript. this means creating a new oject that is
+//  entirely sepearated from the original object, such that change in the 
+// new object do not affect the original and vice versa. this will creste a new object but
+//  nested object will still be reference to the original one
+
+const details = {
+    firstName : "kenny",
+    car : {
+        brand : "toyota",
+        wheels : 4,
+        color : "red"
+    }
+}
+
+const  newDetails = {...details}
+newDetails.firstName = "mike",
+console.log(details);
+console.log(newDetails)
 
