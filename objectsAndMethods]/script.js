@@ -30,7 +30,7 @@ human.favFood = "garri"
 
 console.log(human)
 console.log(human.firstName)
-console.log(human['firstName']) 
+// console.log(human['firstName']) 
 console.log(human['DLT africa location'])
 
 //another way to call it out
@@ -195,6 +195,10 @@ person.greet();
 // divided into two copying primitive value, copy numbers and copy strings {it is going to behave as it is expected to be, u just need to
 // see what is the value of the variable at the time of adsignment} and COPYING COMPLEX VALUE
 
+// reference is non primitive
+// value is primitive
+
+
 // copying numbers 
 let x1 = 2
 let y1 = x;
@@ -239,7 +243,8 @@ const person1 = {
 const otherPerson1 = {
     firstName: "Soliu"
 }
-console.log(person1===otherPerson1)
+console.log(person1==otherPerson1)
 
 
 
+// wednesday 

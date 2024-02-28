@@ -56,11 +56,11 @@ console.log(word.toLowerCase())
 const man = "i love coding and my favorite language is javascript"
 const final = man.indexOf('javascript')
 const main = man.lastIndexOf('my')
-
-
-
 console.log(main)
 console.log(final)
+
+
+
 
 const check = man.includes('favourite')
 
