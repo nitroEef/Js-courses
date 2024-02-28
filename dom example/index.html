@@ -7,25 +7,33 @@
     <style>
         .menuItem{
             background-color: brown;
-            color:white
+            color:white;
+
         }
 
         .menuItem.active{
             background-color: blue;
             color:black
         }
+
+        h2{
+            font-size:100px ;
+            color: red;
+        }
     </style>
 </head>
 <body>
     <ul>
-        <li class="menuItem">Menu</li>
-        <li class="menuItem active">Contact</li>
-        <li class="menuItem">Product</li>
-        <li class="menuItem">blog</li>
+        <li onclick ="menuClicked(this)" class="menuItem">Menu</li>
+        <li onclick ="menuClicked(this)" class="menuItem active">Contact</li>
+        <li onclick ="menuClicked(this)" class="menuItem">Product</li>
+        <li onclick ="menuClicked(this)" class="menuItem">blog</li>
 
       
 
     </ul>
+
+    <h2></h2>
 
 
 
