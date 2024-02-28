@@ -61,11 +61,27 @@ const originalObject = {
         city : "pegamut",
         state : "Ogun "
     }
-}
+};
+
+const cloneObj = Object.assign({}, originalObject);
+cloneObj.name = "Naphy";
+cloneObj.address.city = "Elejigbo"
+
+console.log(originalObject)
+console.log(cloneObj)
 
 
 
 
 
+//spreading operator
+const arr1 = [1,2,3,4];
+const arr2 = [4,5,6,7];
+const merged = [...arr1,...arr2];
+console.log(merged)
 
+
+const text = {name :"Bode"};
+const numbs = [1,2,3,4];
+const cloneMerged = {...text, number:[...numbs]}
 
