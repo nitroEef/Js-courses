@@ -103,3 +103,9 @@ console.log(this)
     const averageCohorts = new Cohorts ( "tobi", 33, "rice",64735353,  new Date("march 1, 1654"))
 
 
+// class 
+
+// a class is a schemer that can save many many many values 
+1. class declaration
+2. class expression
+3. 
