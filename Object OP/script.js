@@ -40,4 +40,5 @@ function persontwo (first_name, last_name){
     this.last_name = last_name}
 
     //THE NEW KEYWORD
-it creates a new
+// it creates a new empty object 
+const student = {}
