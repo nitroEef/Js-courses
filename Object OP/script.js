@@ -1,4 +1,4 @@
-calculating 
+// calculating the rectangle area with function 
 
 const rectangleArea = function(length, width) {
     return length * width;
@@ -42,3 +42,30 @@ function persontwo (first_name, last_name){
     //THE NEW KEYWORD
 // it creates a new empty object 
 const student = {}
+const studentTwo = new Object();
+
+console.log(studentTwo)
+
+// another exsmple 
+const arr = [1,2,3];
+const newArr = new Array (1,2,3)
+console.log (arr, newArr)
+
+//date
+const mybirthday = new Date();
+console.log(mybirthday)
+
+const mynumber = new Number(134.77)
+console.log(mynumber.toFixed(1))
+
+//THIS keyword
+// reference the object that is executing the current function  
+//every function has a reference to its current execution context
+
+
+function Sentence(words) { //constructor function syntax
+    // this.words = words;
+    console.log(this)
+
+}
+const $_ = new Sentence (`hello there, we re learning bout this keyword`)
