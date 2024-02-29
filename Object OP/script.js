@@ -173,23 +173,64 @@ const headMaster = new School ("Hayzed", "PEGAMUT");
 console.log(headMaster.principal);
 
 ////
-const RectShape = class Board{
-    constructor(length , breadth){
-        this.length = length;
-        this.breadth = breadth;
-    }
-get calculator() {
-    return this.areaCalculate()
-}
-areaCalculate() {
-    return (this.length * this.breadth)
-}
-}
-
-const bigCal  = new RectShape (22, 21)
-console.log(bigCal.calculator)
-
 // with an unanonymous class function named rectShape , create  a constructor
 // with params of length and breadth , get the area of  rectangle  using getter
 // function and calculate method , create a new instance for the rectShape with its relative argument
 // answer to the console 
+
+const RectShape = class Rectangle{
+    constructor(length , breadth){
+        this.length = length;
+        this.breadth = breadth;
+    }
+get area() {
+    return this.ropo()
+}
+ropo() {
+    return (this.length * this.breadth)
+}
+}
+
+const square  = new RectShape (22, 21)
+console.log(square.area)
+
+// difference between const and class 
+//**** Different between const and class ******///
+
+// const detailOne = {
+//     name: "Class Captain",
+//     age: 540,
+//     isBlack: false
+// }
+
+// const detailTwo = {
+//     name: "Baba Oloye",
+//     age: 640,
+//     isBlack: true
+// }
+
+// const getDetailOne = new detailOne()
+// console.log(getDetailOne)
+
+
+class Detail{
+    constructor(name, age, isPretty){
+        this.name = name;
+        this.age = age;
+        this.isPretty = isPretty
+    }
+}
+
+const detailOn = new Detail("bash", 12, false);
+const detailToo = new Detail("naff", 32, false);
+const detailToro = new Detail("Bode", 12, true);
+
+console.log([detailOn,detailToo,detailToro])
+
+const Array = [detailOn,detailToo]
+Array.push(detailToro)
+Array.shift(detailOn)
+console.log(array)
+
+
+
