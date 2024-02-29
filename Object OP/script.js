@@ -64,8 +64,42 @@ console.log(mynumber.toFixed(1))
 
 
 function Sentence(words) { //constructor function syntax
-    // this.words = words;
+    this.words = words;
     console.log(this)
 
 }
 const $_ = new Sentence (`hello there, we re learning bout this keyword`)
+
+
+function Car(color, brand, wheels, id){
+this.color = color ;
+this.brand = brand;
+this.wheels = wheels;
+this.id = id;
+
+console.log(this)
+}
+const blueCar = new Car("blue", "bmw", 4,)
+const redCar = new Car("red", "lamborghini", 4,)
+
+
+// create a cohort function with params(name,age,favfood,phone Number,baide), create
+// a new instance for three different cohorts , log the param argument onto the console ;;
+// baide should be a new date instance
+
+
+function Cohorts(name, age, favfood, phoneNumber, baide){
+    this.name = name;
+    this.age = age;
+    this.favfood = favfood;
+    this.phoneNumber= phoneNumber;
+    this.baide = baide;
+
+console.log(this)
+}
+
+    const seniorCohorts = new Cohorts ( "eef", 24, "amala", 2342353, new Date("march 5, 2024"))
+    const juniorCohorts = new Cohorts ( "karimui", 21, "poundo", 243223,  new Date("march 13,2014"))
+    const averageCohorts = new Cohorts ( "tobi", 33, "rice",64735353,  new Date("march 1, 1654"))
+
+
