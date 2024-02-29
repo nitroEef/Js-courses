@@ -106,6 +106,90 @@ console.log(this)
 // class 
 
 // a class is a schemer that can save many many many values 
-1. class declaration
-2. class expression
-3. 
+// 1. class declaration
+// 2. class expression
+
+class Shape1 {
+    constructor(width, height){
+        this.width = width;
+        this.height = height;
+
+        console.log(this)
+    }
+
+}
+const Area = new Shape1 (10, 2);
+
+//class expression
+// anonymous 
+
+
+class Shaped{
+    constructor(width, height){
+        this.width = width;
+        this.height = height;
+
+        console.log(this)
+    }
+
+}
+const Area1 = new Shaped (10, 2);
+
+
+// unanonymous 
+const bigBoy = class Bigie {
+    constructor (name, age){
+        this.name = name;
+        this.age= age;
+    }
+    // getter function
+    get him () {
+        return this.coder();
+    }
+    //method
+    coder() {
+        return {name: this.name , age: this.age}
+    }
+}
+const instance = new bigBoy ("paiko", 44)
+console.log(instance.him)
+
+
+const School = class Academy {
+    constructor(name, location){
+        this.name = name;
+        this.location = location
+    }
+    get principal() {
+        return this.seniorBoy()
+    }
+
+    seniorBoy() {
+        return {name: this.name, location: this.location}
+    }
+}
+
+const headMaster = new School ("Hayzed", "PEGAMUT");
+console.log(headMaster.principal);
+
+////
+const RectShape = class Board{
+    constructor(length , breadth){
+        this.length = length;
+        this.breadth = breadth;
+    }
+get calculator() {
+    return this.areaCalculate()
+}
+areaCalculate() {
+    return (this.length * this.breadth)
+}
+}
+
+const bigCal  = new RectShape (22, 21)
+console.log(bigCal.calculator)
+
+// with an unanonymous class function named rectShape , create  a constructor
+// with params of length and breadth , get the area of  rectangle  using getter
+// function and calculate method , create a new instance for the rectShape with its relative argument
+// answer to the console 
