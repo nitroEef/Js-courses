@@ -48,7 +48,7 @@ console.log(studentTwo)
 
 // another exsmple 
 const arr = [1,2,3];
-const newArr = new Array (1,2,3)
+const newArr = new Array(1,2,3)
 console.log (arr, newArr)
 
 //date
@@ -95,7 +95,7 @@ function Cohorts(name, age, favfood, phoneNumber, baide){
     this.phoneNumber= phoneNumber;
     this.baide = baide;
 
-console.log(this)
+console.log(this);
 }
 
     const seniorCohorts = new Cohorts ( "eef", 24, "amala", 2342353, new Date("march 5, 2024"))
@@ -227,10 +227,49 @@ const detailToro = new Detail("Bode", 12, true);
 
 console.log([detailOn,detailToo,detailToro])
 
-const Array = [detailOn,detailToo]
-Array.push(detailToro)
-Array.shift(detailOn)
+const array = [detailOn,detailToo]
+array.push(detailToro)
+array.shift(detailOn)
 console.log(array)
 
 
+////////////////////////////////////////////////////////////
 
+const createPerson = (name, age, isHands) => {
+    return {name, age, isHands}
+}
+
+const personCreated = createPerson("Bode", 45, true);
+console.log(personCreated);
+
+
+// inheritance is the ability of a class to derive properties and
+//  xtics from another clsss, while having its own properties as well
+
+
+
+// INHERITANCE
+class Ganimal {
+    alive = true
+
+    isBeautiful = 'This animal is beautiful';
+
+    eat() {
+        console.log(`This ${this.name} can eat`);
+    }
+
+    sleep() {
+        console.log(`This ${this.name} can sleep`);
+    }
+};
+
+class Rabbit extends Ganimal {
+    name = "Rabbit"
+
+    run() {
+        console.log(`This ${this.name} can run`)
+    }
+}
+
+const rabbit = new Rabbit ()
+console.log(rabbit);
