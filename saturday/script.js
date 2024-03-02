@@ -1,82 +1,82 @@
-// AND Operator
+// // AND Operator
 
-let result;
-let age = 25;
+// let result;
+// let age = 25;
 
-if(age > 20 && age < 30) {
-    result = age + 50;
-}else {
-    result = age;
-}
+// if(age > 20 && age < 30) {
+//     result = age + 50;
+// }else {
+//     result = age;
+// }
 
-console.log(result);
+// console.log(result);
 
 
-// OR Operator
+// // OR Operator
 
-let costs = 40;
-let selPrice;
-let profits = 10;
+// let costs = 40;
+// let selPrice;
+// let profits = 10;
 
-if (costs >= 50 || costs === 55) {
-    selPrice = costs + profits;
-}
-else{
-    selPrice = costs;
-}
+// if (costs >= 50 || costs === 55) {
+//     selPrice = costs + profits;
+// }
+// else{
+//     selPrice = costs;
+// }
 
-console.log(selPrice);
+// console.log(selPrice);
 
-// NOT Operator
-let name = "Hayzed";
+// // NOT Operator
+// let name = "Hayzed";
 
-if(name !== "Hayzed") {
-    console.log("Why are u lying");
-}
-else {
-    console.log("That is good")
-}
+// if(name !== "Hayzed") {
+//     console.log("Why are u lying");
+// }
+// else {
+//     console.log("That is good")
+// }
 
-//loop while
-let num = 5;
-let i = 0;
-while (i < num) {i++;
-    console.log(i)
+// //loop while
+// let num = 5;
+// let i = 0;
+// while (i < num) {i++;
+//     console.log(i)
 
-}
+// }
 
-//for loop
+// //for loop
 
-for (let index = 0; index < num; index++){
-    console.log(index)
-}
+// for (let index = 0; index < num; index++){
+//     console.log(index)
+// }
 
-//checking for a leap year
-//conditions
-//the year divided by 4 should have a remainder of zero
-//the year divided by 100  should have a non zero remainder 
-//if divided by 100 gives no remainder, then divided by 400 should give a remainder
+// //checking for a leap year
+// //conditions
+// //the year divided by 4 should have a remainder of zero
+// //the year divided by 100  should have a non zero remainder 
+// //if divided by 100 gives no remainder, then divided by 400 should give a remainder
 
-const year = prompt("Enter the year");
+// const year = prompt("Enter the year");
 
-const checkLeap = (year) => {
-    let result;
-    if((year % 4 === 0 && year % 100 !== 0) || (year % 4 === 0 && year % 100 === 0 && year % 400 === 0)) {
-        result = "Yes! it is a leap year";
-    }
-    else{
-        result = "No! it is not a leap year"
-    }
+// const checkLeap = (year) => {
+//     let result;
+//     if((year % 4 === 0 && year % 100 !== 0) || (year % 4 === 0 && year % 100 === 0 && year % 400 === 0)) {
+//         result = "Yes! it is a leap year";
+//     }
+//     else{
+//         result = "No! it is not a leap year"
+//     }
 
-    return result;
-}
+//     return result;
+// }
 
-const answer = checkLeap(2000)
+// const answer = checkLeap(2000)
 
-alert(answer);
+// alert(answer);
 // console.log(answer 
 
-//for eacg
+//for each
 const names = ["soliu", "kenny", "ola"];
 const greeting = names.forEach((name) => {
     console.log(`${name}, you are welcomwe`)
@@ -86,3 +86,8 @@ const greeting = names.forEach((name) => {
 
 // map value 
 // the return value of a map  is ana array 
+const numberse = [1,2,3,4]
+const times = numberse.map((numby) => {
+    return numby * numberse.indexOf(numby);
+})
+console.log(times)
