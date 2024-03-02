@@ -76,4 +76,13 @@ const answer = checkLeap(2000)
 alert(answer);
 // console.log(answer 
 
+//for eacg
 const names = ["soliu", "kenny", "ola"];
+const greeting = names.forEach((name) => {
+    console.log(`${name}, you are welcomwe`)
+})
+
+
+
+// map value 
+// the return value of a map  is ana array 
