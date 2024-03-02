@@ -91,3 +91,16 @@ const times = numberse.map((numby) => {
     return numby * numberse.indexOf(numby);
 })
 console.log(times)
+
+
+// oop 
+// declaration types 
+// 1. object literal  
+// 2. constructor function 
+function students (age, name, height){
+    this.age = age;
+    this.name = name;
+    this.height = height;
+
+    return this;
+}
