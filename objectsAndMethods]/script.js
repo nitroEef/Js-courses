@@ -21,7 +21,7 @@ console.log(person)
 //assessing and adding of properties to an object
 const human = {
     firstName : 'Abdullah',
-    "DLT africa location":"pegamut" 
+    DLT_africa_location:"pegamut" 
 }
 
 human.pet = {name:"cobra", age:3}
@@ -31,7 +31,7 @@ human.favFood = "garri"
 console.log(human)
 console.log(human.firstName)
 // console.log(human['firstName']) 
-console.log(human['DLT africa location'])
+console.log(human['DLT_africa_location'])
 
 //another way to call it out
 console.log(human.pet.name)
