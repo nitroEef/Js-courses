@@ -77,34 +77,81 @@ const fetchUserOne = (name,callback) => {
 
   
 //CALL BACK HELL
+// const fetchUserTwo = (username, callback) => {
+//     setTimeout(() => {
+//         console.log("Now we have the user");
+//         callback(username);
+//     },2000);
+// }
+
+// const fetchUserPhotoes =(username, callback) => {
+//     setTimeout(() => {
+//         console.log(`We now have the photo for ${username}`)
+//         callback(["photo1", "photo2"])
+//     }, 2000);
+// }
+
+// const fetchUserPhotoesDetails = (photo, callback) => {
+//     setTimeout(() => {
+//         console.log(`We now have the photo details ${photos}`);
+//         callback("details")
+//     }, 2000);
+// }
+
+// const user3 = fetchUserTwo("Micheal", (user) => {
+//     console.log(`your name is {username}`);
+//     fetchUserPhotoes(user.username, (userPhotos) => {
+//         console.log(`your photos are: ${userphotos)`
+//         fetchUserPhotoesDetails(userphotos[0], (details) => {
+//             console.log("details")
+//         })
+//     })
+// })
+
 const fetchUserTwo = (username, callback) => {
     setTimeout(() => {
         console.log("Now we have the user");
-        callback(username);
+        callback({username});
     },2000);
 }
 
-const fetchUserPhotoes =(esername, callback) => {
+const fetchUserPhotos =(username, callback) => {
     setTimeout(() => {
-        console.log("We now have the photo")
+        console.log(`Now we have the photo details ${username}`)
         callback(["photo1", "photo2"])
     }, 2000);
 }
 
-const fetchUserPhotoesDetails = (photo, callback) => {
+const fetchUserPhotosDetails = (photos, callback) => {
     setTimeout(() => {
-        console.log("We now have the photo details");
+        console.log(`Now we have the photos details ${photos}`);
         callback("details")
     }, 2000);
 }
 
-const user3 = fetchUserTwo("test", (username) => {
-    console.log(username);
-    fetchUserPhotoes(username, (userphotos) => {
-        console.log(userphotos);
-        fetchUserPhotoesDetails(userphotos[0], (details) => {
-            console.log("details")
+const user3 = fetchUserTwo("Micheal", (user) => {
+    console.log(`Your name is: ${user.username}`);
+    fetchUserPhotos(user.username, (userphotos) => {
+        console.log(`Your photos are: ${userphotos}`);
+        fetchUserPhotosDetails(userphotos[0], (details) => {
+            console.log(`Your photo details are ${details}`)
+        })
+    })
+})
+// this is called back hell. it becomes unreadable
+const user4 = fetchUserTwo("Micheal", (user) => {
+    fetchUserPhotos(user.username, (userPhotos) => {
+        fetchUserPhotosDetails(userPhotos[0], (details) => {
+            fetchUserPhotosDetails(userPhotos[0], (details) => {
+                fetchUserPhotosDetails(userPhotos[0],(details) => {
+                    fetchUserPhotosDetails(userPhotos[0], (details) => {
+                        console.log(details);
+                    })
+                })
+            })
         })
     })
 })
 
+
+// promise are object that either return a successful fetched data or error 
