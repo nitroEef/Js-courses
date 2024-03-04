@@ -154,4 +154,19 @@ const user4 = fetchUserTwo("Micheal", (user) => {
 })
 
 
+// promise 
 // promise are object that either return a successful fetched data or error 
+
+
+
+    const promise = new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            console.log("now we are in promise");
+            // reject("user not found")
+            resolve({username:"Bode"})
+        },5000);
+    })
+
+        promise
+        .then((user) => console.log(user.username))
+        .catch((error) => console.log(error))
