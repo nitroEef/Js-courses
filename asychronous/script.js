@@ -76,3 +76,35 @@ const fetchUserOne = (name,callback) => {
   
 
   
+//CALL BACK HELL
+const fetchUserTwo = (username, callback) => {
+    setTimeout(() => {
+        console.log("Now we have the user");
+        callback(username);
+    },2000);
+}
+
+const fetchUserPhotoes =(esername, callback) => {
+    setTimeout(() => {
+        console.log("We now have the photo")
+        callback(["photo1", "photo2"])
+    }, 2000);
+}
+
+const fetchUserPhotoesDetails = (photo, callback) => {
+    setTimeout(() => {
+        console.log("We now have the photo details");
+        callback("details")
+    }, 2000);
+}
+
+const user3 = fetchUserTwo("test", (username) => {
+    console.log(username);
+    fetchUserPhotoes(username, (userphotos) => {
+        console.log(userphotos);
+        fetchUserPhotoesDetails(userphotos[0], (details) => {
+            console.log("details")
+        })
+    })
+})
+
