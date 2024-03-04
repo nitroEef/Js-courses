@@ -36,7 +36,43 @@ const functionOne = () => {
 
 
 const functionTwo = () => {
-    console.log("function two");
-
+    setTimeout(() =>   console.log("function two") 
+    , 2000);
 }
 functionOne()
+
+
+// const fetchUser = (usernamee) => {
+//         user:"lateef",
+//     username:"eef";
+//     setTimeout(() =>   console.log("fe") 
+//     , 2000);
+
+// }
+
+const fetchUser = (username) => {
+    setTimeout(() => {
+        return{user:username}
+        
+    }, 2000);
+}
+
+const user = fetchUser('test');
+console.log(user)
+
+
+const fetchUserOne = (name,callback) => {
+    setTimeout(() => {
+        
+        console.log("now we have the user");
+        callback({user:name})
+    }, 2000);
+    
+  };
+
+  const user2 = fetchUserOne("EEf", (user2) => {
+    console.log(user2)
+})
+  
+
+  
