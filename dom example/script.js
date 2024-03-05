@@ -16,4 +16,5 @@ const menuClicked = (curEl) => {
 
 
 body.appendChild(heading);
-heading.innerHTML = "We can be going home"
+heading.innerHTML = "We can be going home" 
+//append to attack 

@@ -370,6 +370,36 @@ const fetchedData = async () => {
 // };
 // fetchNestData
 
+
+const fetchNestDta = async () => {
+
+  try{
+      console.log("username")
+ const response = await fetch('https://jsonplaceholder.typicode.com/users'); 
+  
+  if(!response.ok){
+      throw new Error("Not found will fixed soon")
+  }
+  const userData = await response.json() 
+  const mappedData = userData.map(({ id, username,email, name,address, phone, website, company}) =>({
+  id, username, email, name, address: {
+      street: address.street,
+  },
+  phone, website, company: {
+      name: company.name
+  }
+      
+}));
+console.log(mappedData)
+  }catch (error){
+      console.log("error:",error.message)
+}   
+}
+  fetchNestDta()
+
+
+
+
 // mathematical method 
 // it allows you  to perform matheatical task on numbers
 
@@ -385,5 +415,12 @@ console.log(floor)
 const sign = Math.sign(4.4);
 console.log(sign)
 
-const power = Math.power(6,5);
+const power = Math.pow(6,5);
 console.log(power)
+
+const square = Math.sqrt(64);
+console.log(square)
+
+
+const absolute = Math.abs(-6.4);
+console.log(absolute)
