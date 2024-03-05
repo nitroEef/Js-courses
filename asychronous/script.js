@@ -225,4 +225,101 @@ const getAllUsersNames = async () => {
 
  getAllUsersNames();
 
-//  try and catch 
+// //  try and catch 
+// try block contain the code that u want to attempt 
+// if an error occur within this block , js will stop executing,
+//  the try block will now jump to the catch block''
+//  the catch block, is a place where you can handle the error , when an error occur,
+//   it will jump to the Catch..
+//    finally block is optional , always 
+//   run either there is a error or Not, kogbonkankan
+
+const getData = async () => {
+  try{
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const data = await response.json()
+    return data
+
+   } catch(error){
+    console.log('error:', error.message)
+   }
+}
+getData()
+.then((data) => console.log("data:",data)).catch((error) =>console.log("error:error.message"));
+
+
+
+const fetchDataWithError = async () => {
+  try{
+    console.log("fetching Data")
+    const res = await fetch ('https://jsonplaceholder.typicode.com/users')
+
+    if (!res.okay){
+      throw new error("failed to fetch data")
+    }
+    const $data = await  res.json();
+    return $data
+
+  }catch (error) {
+    console.error('error:',error.message)
+  }
+}
+
+fetchDataWithError()
+.then(result => {
+  if (result) {
+    console.log("data", result)
+  }
+})
+
+
+
+
+
+// single details 
+
+
+const fetchSingleData = async () => {
+  try{
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    if(!response.ok) {
+      throw new Error('Not found will fixed soon')
+    }
+    const [userData] = await response.json() // assuming data is an array of user
+    const {username, email, name} = userData;
+    return {username, email, name};
+
+  }catch (error) {
+    console.log('Error:', error.message)
+  }
+}
+fetchSingleData().then(({username,email,name}) => {
+  console.log('Username:', username)
+  console.log('Email:', email)
+  console.log('Name:', name)
+})
+
+
+// example 
+
+const fData = async () => {
+  try{
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    if(!response.ok) {
+      throw new Error('Not found will fixed soon')
+    }
+    const [userData] = await response.json() // assuming data is an array of user
+    const {username, email, name} = userData;
+    return {username, email, name};
+
+  }catch (error) {
+    console.log('Error:', error.message)
+  }
+}
+fData().then(({username,email,name}) => {
+  console.log('Username:', username)
+  console.log('Email:', email)
+  console.log('Name:', name)
+})
