@@ -384,3 +384,6 @@ console.log(floor)
 
 const sign = Math.sign(4.4);
 console.log(sign)
+
+const power = Math.power(6,5);
+console.log(power)
