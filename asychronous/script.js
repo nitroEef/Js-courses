@@ -323,3 +323,52 @@ fData().then(({username,email,name}) => {
   console.log('Email:', email)
   console.log('Name:', name)
 })
+
+// classwork 
+
+const fetchedData = async () => {
+  try{
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+
+    if(!response.ok) {
+      throw new Error('Not found will fixed soon')
+    }
+    const userData = await response.json()
+    const mappedData = userData.map(({username, email, name}) => {
+      return {username,name, email}
+    }) 
+    console.log(mappedData)
+  } catch (error) {
+    console.log("eerror:", error.message)}
+  }
+  fetchedData()
+
+
+const data = await response.json();
+const mappedData = data.map(
+  ({id, username, email, name, address, phone,website, company}) => ({
+    id,
+    username,
+    email,
+    name,
+    address:{
+      street : address. street,
+    },
+    phone,
+    website,
+    company : {
+      name :company.name
+    }
+
+  })
+)
+console.log(mappedData)
+} catch (error) {
+  console.log("error:", error.message);
+
+}
+};
+fetchNestData
+
+// mathematical method 
+// it allows you  to perform matheatical task on numbers
