@@ -185,6 +185,9 @@ fetchUser("zainab")
   }
 
   const anotherFn = async () => {
-    const
+    const data = await myFoolFunc();
+    myUsers.userlist = data;
+    console.log(myUsers.userList)
   }
+  
   myFoolFunc()
