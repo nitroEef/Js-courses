@@ -344,31 +344,43 @@ const fetchedData = async () => {
   fetchedData()
 
 
-const data = await response.json();
-const mappedData = data.map(
-  ({id, username, email, name, address, phone,website, company}) => ({
-    id,
-    username,
-    email,
-    name,
-    address:{
-      street : address. street,
-    },
-    phone,
-    website,
-    company : {
-      name :company.name
-    }
+// const data = await response.json();
+// const mappedData = data.map(
+//   ({id, username, email, name, address, phone,website, company}) => ({
+//     id,
+//     username,
+//     email,
+//     name,
+//     address:{
+//       street : address. street,
+//     },
+//     phone,
+//     website,
+//     company : {
+//       name :company.name
+//     }
 
-  })
-)
-console.log(mappedData)
-} catch (error) {
-  console.log("error:", error.message);
+//   })
+// )
+// console.log(mappedData)
+// } catch (error) {
+//   console.log("error:", error.message);
 
-}
-};
-fetchNestData
+// }
+// };
+// fetchNestData
 
 // mathematical method 
 // it allows you  to perform matheatical task on numbers
+
+const roundNub = Math.round(4.4);
+console.log(roundNub)
+
+const ceil = Math.ceil(4.4);
+console.log(ceil)
+
+const floor = Math.floor(4.5);
+console.log(floor)
+
+const sign = Math.sign(4.4);
+console.log(sign)
