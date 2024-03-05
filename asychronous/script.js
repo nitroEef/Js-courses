@@ -173,21 +173,56 @@ fetchUser("zainab")
   //   console.log(user)
   // }
 
-  const myUsers = {
-    userList :[]
-  }
+  // const myUsers = {
+  //   userList :[]
+  // }
 
 
-  const myFoolFunc = async () => {
+  const myUSers = {
+    userList: []
+}
+
+const myFoolFunc = async () => {
+   const response = await fetch('https://jsonplaceholder.typicode.com/users');
+   const fetchJson = await response.json();
+//    console.log(fetchJson);
+}
+
+const anotherFn = async () => {
+    const data = await myFoolFunc();
+    myUSers.userList = data;
+    console.log(myUSers.userList);
+
+}
+
+anotherFn()
+// console.log(myUSers.userList);
+
+// example 2
+const getAllUsersEmails = async () => {
     const response = await fetch('https://jsonplaceholder.typicode.com/users');
     const fetchJson = await response.json();
-    console.log(fetchJson);
-  }
+ //    console.log(fetchJson);
 
-  const anotherFn = async () => {
-    const data = await myFoolFunc();
-    myUsers.userlist = data;
-    console.log(myUsers.userList)
-  }
-  
-  myFoolFunc()
+    const email = fetchJson.map((user) => {
+        return user.email;
+    })
+    console.log(email)
+ }
+
+getAllUsersEmails();
+
+const getAllUsersNames = async () => {
+    const response = await fetch('https://jsonplaceholder.typicode.com/users');
+    const fetchJson = await response.json();
+ //    console.log(fetchJson);
+
+    const oyee = fetchJson.map((joy) => {
+        return joy.username;
+    })
+    console.log(oyee);
+ }
+
+ getAllUsersNames();
+
+//  try and catch 
