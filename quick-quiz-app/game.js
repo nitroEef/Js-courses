@@ -1,9 +1,9 @@
 // get elements with dom ... create an array of questions 
 const question = document.getElementById('question')
-const progressText= document.getElementById('progresstext')
-const scoreText= document.getElementsById('score')
+const progressText= document.getElementById('progressText')
+const scoreText= document.getElementById('score')
 const progressBarFull= document.getElementById('progressBarFull')
-const game= document.getElementById('game')
+const games= document.getElementById('game')
 const choiceText = Array.from(document.getElementsByClassName('choice-text'))
 
 let currentQuestion = {} ;
@@ -39,3 +39,29 @@ let questions = [
       }
 
 ]
+
+const CORRECT_BONUS = 10;
+const MAX_QUESTIONS = 3 ;
+
+//START QUIZ
+
+startGame = () => {
+    questionCounter=0;
+    score = 0;
+    availableQuestion = [...questions] //shalow cloning, copying questions to availablequestion
+    console.log(availableQuestion)
+    getNewQuestion()
+}
+
+// const getNewQuestion = () => {
+//     questionCounter++;
+//     progressText.innerText=`Question ${questionCounter}/${MAX_QUESTIONS}`;
+//     progressBarFull.style.width = '${(questionCounter / MAX_QUESTIONS)'
+// }
+const getNewQuestion = () => {
+    questionCounter++;
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`;
+    progressBarFull.style.width = $`{(questionCounter / MAX_QUESTIONS) * 100}%`;
+}
+
+startGame()
