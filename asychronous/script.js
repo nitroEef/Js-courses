@@ -261,7 +261,7 @@ const fetchDataWithError = async () => {
     return $data
 
   }catch (error) {
-    console.error('error:',error.message)
+    console.log('error:',error.message)
   }
 }
 
@@ -273,7 +273,7 @@ fetchDataWithError()
 })
 
 
-
+//thins happening to gether in the order they aarecset up is sychronized
 
 
 // single details 
@@ -422,5 +422,5 @@ const square = Math.sqrt(64);
 console.log(square)
 
 
-const absolute = Math.abs(-6.4);
+const absolute = Math.abs(-64);
 console.log(absolute)
