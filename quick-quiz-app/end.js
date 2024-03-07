@@ -3,8 +3,12 @@ const saveScoreBtn = document.getElementById('saveScoreBtn');
 const finalScore = document.getElementById('finalScore');
 const mostRecentScore = localStorage.getItem('mostRecentScore');
 
-
+const highScores =JSON.parse(localStorage.getItem("highScores"))||[]
 console.log(mostRecentScore)
+
+// we want to specify how many highscore do we wnt to display on our highscore page 
+const MAX_HIGH_SCORE = 5
+
 finalScore.innerText = mostRecentScore;  //to get out score in the local storage
 
 // our button should be clickable anytime we type the username 
@@ -13,4 +17,28 @@ finalScore.innerText = mostRecentScore;  //to get out score in the local storage
 // when we click on username..keyup is one of the event
 username.addEventListener("keyup", () => {
     saveScoreBtn.disabled = !username.value;
+});
+
+// to store the name of the player and his or her score in the local storage 
+// after saving the highsvore. it should redirect to the homepage
+const saveHighScore = () => {
+    const score = {
+        score: mostRecentScore,
+        name : username.value
+    }
+
+    // to push the score inside the highscore array 
+    highScores.push(score)
+    highScores.sort((a,b) => b.score - a.score);
+    highScores.splice(5)
+
+    console.log(highScores)
+
+    localStorage.setItem('highScore', JSOn.stringify(highScores));
+    window.location.assign("./index.html")
+}
+
+saveScoreBtn.addEventListener('click',(event) => {
+    event.preventDefault();
+    saveHighScore()
 })
