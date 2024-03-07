@@ -6,26 +6,48 @@ const progressText = document.getElementById("progressText");
 const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const game = document.getElementById("game");
+const loader = document.getElementById("loader");
+
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 
 let currentQuestion = {};
 let acceptingAnswer = false;
 let score = 0;
-let questionCounter = 0;
+let  questionCounter = 0;
 let availableQuestion = [];
 
 let questions = [];
-fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple").then((res) =>{
-    return res.json();
+
+fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple').then((res) => {
+  return res.json();
 }).then((loadingQuestions) => {
-    questions = loadingQuestions.results.map((loadingQuestion) =>{
-    const formattedQuestion = {
-        question : loadingQuestion.question
-    })
+  questions = loadingQuestions.results.map((loadingQuestion) => {
+    	const formattedQuestion = {
+        question: loadingQuestion.question
+      };
+
+      const answerChoices = [...loadingQuestion.incorrect_answers];
+      formattedQuestion.answer = Math.floor(Math.random() * answerChoices.length) + 1;
+      answerChoices.splice(
+        formattedQuestion.question - 1,
+        0,
+        loadingQuestion.correct_answer
+      );
+      answerChoices.forEach((choice, i) => {
+        formattedQuestion["choice" + (i + 1)] = choice;
+      })
+
+      return formattedQuestion;
+  });
+  startGame()
+  
+})
+.catch((err) => {
+  console.log(err);
 })
 
 const CORRECT_BONUS = 10;
-const MAX_QUESTION = 3;
+const MAX_QUESTION = 7;
 
 //START QUIZ
 
@@ -34,7 +56,13 @@ const startGame = () => {
     score = 0;
     availableQuestion = [...questions];
     // console.log(availableQuestion);
+    getNewQuestion();
+
+    // to remove hidden from html 
+    game.classList.remove("hidden")
+    loader.classList.add("hidden")
     getNewQuestion()
+
 }
 
 const getNewQuestion = () => {
@@ -107,4 +135,4 @@ const incrementScore = (num) => {
     score+=num;
     scoreText.innerText = score
 }
-startGame();
+// startGame();
