@@ -3,10 +3,10 @@
 // Get Element with DOM --> create an array of question.
 const question = document.getElementById("question");
 const progressText = document.getElementById("progressText");
-const scoreText = document.getElementById("Score");
+const scoreText = document.getElementById("score");
 const progressBarFull = document.getElementById("progressBarFull");
 const game = document.getElementById("game");
-const choice = Array.from(document.getElementsByClassName("choice-text"));
+const choices = Array.from(document.getElementsByClassName("choice-text"));
 
 let currentQuestion = {};
 let acceptingAnswer = false;
@@ -55,7 +55,10 @@ const startGame = () => {
 }
 
 const getNewQuestion = () => {
-    questionCounter++;
+    //wea re trying to stop the question at 3..if there is no morre 
+    // question or question counter is rgreater or equal to max question which is 3 
+
+    questionCounter++; //increasing the question by one
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTION} `;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTION) * 100}%`
 
@@ -65,12 +68,12 @@ const getNewQuestion = () => {
     // console.log(currentQuestion);
 
 
-    choice.forEach((choice) => {
+    choices.forEach((choice) => {
         const number = choice.dataset["number"];
         choice.innerText = currentQuestion["choice" + number]
     })
 availableQuestion.splice(questionIndex,1);
-acceptingAnswer=true
+acceptingAnswer=true;
 }
 
 // always use preventdefault anytime u add addEventListener, 
@@ -81,9 +84,33 @@ choices.forEach((choice) => {
     choice.addEventListener('click', (e) => {
         e.preventDefault();
 
-        if(!acceptingAnswer) return;
-        const selectedChoice = e.target;
-        const selectedAnswer = selectedChoice.dataset["number"]
+        if(!acceptingAnswer) return; //if not accepting answwer return nothing
+
+        // whatever we are clciking in one of the option,
+        //  will be our selectedchoice at that time lineeightysix
+
+        const selectedChoice = e.target; 
+        const selectedAnswer = selectedChoice.dataset["number"];
+        const classToApply = selectedAnswer == currentQuestion.answer ?  "correct" : "inCorrect";
+
+        if(classToApply == "correct") {
+            incrementScore(CORRECT_BONUS);
+        }
+
+        //this is to the css background of correct or incorrecte to the p tag 
+        selectedChoice.parentElement.classList.add(classToApply);
+
+        setTimeout(()=> {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNewQuestion()
+        },1000)
     })
 })
+
+//this will increase our score, if we get it corredtly, 
+// it will add to the number 
+const incrementScore = (num) => {
+    score+=num;
+    scoreText.innerText = score
+}
 startGame();
