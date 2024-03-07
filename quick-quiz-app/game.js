@@ -58,6 +58,9 @@ const getNewQuestion = () => {
     //wea re trying to stop the question at 3..if there is no morre 
     // question or question counter is rgreater or equal to max question which is 3 
 
+    if (availableQuestion.length === 0 || questionCounter >= MAX_QUESTION){
+        return window.location.assign("./end.html")
+    }
     questionCounter++; //increasing the question by one
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTION} `;
     progressBarFull.style.width = `${(questionCounter / MAX_QUESTION) * 100}%`
