@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONgrats !</title>
     <link rel="stylesheet" href="app.css">
-    <link rel="stylesheet" href="end.css">
 
 </head>
 <body>
@@ -14,7 +13,7 @@
             <h1 id = "finalScore"></h1>
         <form>
             <input type="text" name="username" id="username" placeholder="username">
-            <button type="submit" id="saveScoreBtn" disabled >Save</button>
+            <button type="submit" id="saveScoreBtn" class="btn" disabled onclick="saveHighScore(e)">Save</button>
         </form>
         <a href="./game.html" class="btn">Play Again</a>
         <a href="./index.html" class="btn">Go home</a>

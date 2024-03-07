@@ -50,7 +50,7 @@ const startGame = () => {
     questionCounter = 0;
     score = 0;
     availableQuestion = [...questions];
-    console.log(availableQuestion);
+    // console.log(availableQuestion);
     getNewQuestion()
 }
 
@@ -59,23 +59,30 @@ const getNewQuestion = () => {
     // question or question counter is rgreater or equal to max question which is 3 
 
     if (availableQuestion.length === 0 || questionCounter >= MAX_QUESTION){
+        localStorage.setItem("mostRecentScore", score) //whatever we score is going to be store into the local storage as our most recent score ,  mostrecentscore is just any name which will be the key and the value of score wil be anything that we scored
         return window.location.assign("./end.html")
     }
     questionCounter++; //increasing the question by one
-    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTION} `;
-    progressBarFull.style.width = `${(questionCounter / MAX_QUESTION) * 100}%`
+    progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTION} `; //to display whatever we want in our progresstext...the total number of question we are going to answer
+     progressBarFull.style.width = `${(questionCounter / MAX_QUESTION) * 100}%`;// we want to manipulate the width so that as the question increases the witdth also increases by one third of te progress bar
 
     const questionIndex = Math.floor(Math.random() * availableQuestion.length);
     currentQuestion = availableQuestion[questionIndex];
     question.innerText = currentQuestion.question
     // console.log(currentQuestion);
 
+    // if we select a choice, if it is right or wrong, if accepting anser is trueit shoild bring new question 
+    
+//for each of te choices is what we want to talj aout,, we now have 
+// a numer as a variable which will attach to each choice 
 
     choices.forEach((choice) => {
         const number = choice.dataset["number"];
+        //instead of showing choice 1 , we will want it to show choice plus number. each question has choices, each qquestn should be 
+        // relative to the questioon attached to it, it it doesnt, we wont be able to select it
         choice.innerText = currentQuestion["choice" + number]
     })
-availableQuestion.splice(questionIndex,1);
+availableQuestion.splice(questionIndex,1); //
 acceptingAnswer=true;
 }
 
@@ -103,9 +110,10 @@ choices.forEach((choice) => {
         //this is to the css background of correct or incorrecte to the p tag 
         selectedChoice.parentElement.classList.add(classToApply);
 
+       //after one second it should remove that color..
         setTimeout(()=> {
             selectedChoice.parentElement.classList.remove(classToApply);
-            getNewQuestion()
+            getNewQuestion()  //and this mean after one second it should get new question
         },1000)
     })
 })
