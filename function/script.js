@@ -10,14 +10,14 @@
 
 
 
-// 1. function declaration 
+// 1..... function declaration 
 function square (number) {//params is passed in the parenthesis 
     // statement 
 }
 square()
 
 
-// function expression
+// 2.....function expression
 const nameFunction = function(params) {}  
 
 
