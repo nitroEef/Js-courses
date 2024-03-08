@@ -19,7 +19,7 @@
 
 // disadvantages for local scope
 // 1. they have a very limited scope
-// 2.
+
 
 const name = "zainab";
 const age = 17
