@@ -159,3 +159,4 @@ for (let i= 2; i <= Math.sqrt(number); index++) {
     const prime = isPrime(3)
     console.log(prime)
 
+///////////
