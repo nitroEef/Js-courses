@@ -117,7 +117,7 @@ outerFunction()
 //  a function that carries a function with the condition that if time return a certain number then
 // return the final answer of the condition *4
 // and in the main function the final answer of the previous question 
-// should be divided by 2 and i wnt asnwer in console.
+// should be divided by 2 and i want answer in console.............................
 
 
 const firstFunction = () => {
