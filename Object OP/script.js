@@ -1,4 +1,5 @@
 // calculating the rectangle area with function 
+//length and width are the parameters
 
 const rectangleArea = function(length, width) {
     return length * width;
@@ -273,3 +274,15 @@ class Rabbit extends Ganimal {
 
 const rabbit = new Rabbit ()
 console.log(rabbit);
+
+//calculate the size of a room with function
+
+const roomsize = function(name,number){
+    return(name* number)
+}
+
+const lengths = 2;
+const breadths= 3;
+
+const roomsizer = roomsize(lengths, breadths)
+console.log(roomsizer)
