@@ -97,7 +97,7 @@ console.log(months)
 
 
 
-// /************splice()***********/ this is to add and removeelement of the array
+// /************splice()*******/ this is to add and removeelement of the array
 // three parameters 
 // the element u want to add
 const countries = ["kenya", "malaysia", "canada", "Qatar","niger"]

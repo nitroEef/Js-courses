@@ -149,15 +149,15 @@ const nestedFunction = (a , b ,c) => {
         }
     }
 
-for (let i= 2; i <= Math.sqrt(number); index++) {
-        if (number % i === 0) {
-            return false;
-        }   
-}
-    return true;
+// for (let i= 2; i <= Math.sqrt(number); index++) {
+//         if (number % i === 0) {
+//             return false;
+//         }   
+// }
+//     return true;
 
-    const prime = isPrime(3)
-    console.log(prime)
+//     const prime = isPrime(3)
+//     console.log(prime)
 
 ///////////
 /////////
