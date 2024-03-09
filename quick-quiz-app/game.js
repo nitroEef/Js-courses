@@ -10,6 +10,8 @@ const loader = document.getElementById("loader");
 
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 
+
+//all these will be changed later
 let currentQuestion = {};
 let acceptingAnswer = false;
 let score = 0;
