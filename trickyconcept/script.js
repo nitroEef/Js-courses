@@ -138,3 +138,9 @@ const firstFunction = () => {
     const finalAnswer = initialAnswer / div
     console.log (finalAnswer)
 }
+
+function bigquestion(bobo){
+    console.log(`hello ${bobo}`)
+}
+
+bigquestion("babybobo")
