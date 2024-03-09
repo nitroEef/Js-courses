@@ -244,7 +244,7 @@ console.log(personCreated);
 
 
 // inheritance is the ability of a class to derive properties and
-//  xtics from another clsss, while having its own properties as well
+//  xtics from another class, while having its own properties as well
 
 
 
