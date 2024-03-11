@@ -29,12 +29,16 @@ const choice = {
     rock: {name: "rock", defeats: ["scissors", "rock"]},
 }
 
+
+
 // //this will select all the choices in the console while selected
 // // function select(playerChoice){
 // //     console.log(playerChoice)
 // // }
 
-let computerChoice = "";
+let computerChoice = '';
+let playerScoreNumber = '';
+let computerScoreNumber = '';
 
 // reset all selected icons 
 function resetSelected(){
@@ -59,20 +63,23 @@ function computerRandomChoice(){
     else {
         computerChoice = 'spock'
     }
-    console.log(computerChoice)
+    // console.log(computerChoice)
 }
 
-
-
-
-
+// updtiing the scores 
+function updateScores(playerChoice) {
+console.log(playerChoice, computerChoice)
+}
 
 //call functions to process turn
 //the function that maks sure when clicked, 
 // reset selected and computer randsom complete teir task 
-function checkResult(){
+
+function checkResult(playerChoice){
     resetSelected();
-    computerRandomChoice()
+    computerRandomChoice();
+    displayComputerChoice();
+    updateScores(playerChoice)
 }
 
 function select(playerChoice){
@@ -106,30 +113,29 @@ function select(playerChoice){
 
 
 
-function displayComputerChoice(playerChoice){
-    checkResult();
+function displayComputerChoice(){
 
 
-    switch(playerChoice){
-        case 'roch':
-            playerRock.classList.add('selected');
-            playerChoiceEl.textContent ='---Rock'
+    switch(computerChoice){
+        case 'rock':
+            computerRock.classList.add('selected');
+           computerChoiceEl.textContent ='---Rock'
             break;
         case 'paper':
-            playerPaper.classList.add('selected');
-            playerChoiceEl.textContent ='---Paper'
+          computerPaper.classList.add('selected');
+            computerChoiceEl.textContent ='---Paper'
             break;
         case 'scissors':
-            playerScissors.classList.add('selected');
-            playerChoiceEl.textContent ='---Scissors'
+            computerScissors.classList.add('selected');
+            computerChoiceEl.textContent ='---Scissors'
             break;
         case 'lizard':
-            playerLizard.classList.add('selected');
-            playerChoiceEl.textContent ='---Lizard'
+            computerLizard.classList.add('selected');
+            computerChoiceEl.textContent ='---Lizard'
             break;
         case 'spock':
-            playerSpock.classList.add('selected');
-            playerChoiceEl.textContent ='---Spock'
+            computerSpock.classList.add('selected');
+            computerChoiceEl.textContent ='---Spock'
             break;
         
     }
