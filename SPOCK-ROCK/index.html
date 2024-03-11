@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="game-container">
@@ -24,6 +25,28 @@
             <i class="far fa-hand-spock" title="Spock" id="playerSpock" onclick=""></i>
 
          </div>
+         <div class="player-container" id="computer">
+            <h2>
+                Computer - <span id="computerScore">0</span>
+                <span class="choice" id="computerChoice"></span>
+            </h2>
+            <i class="far fa-hand-rock" title="Rock" id="computerRock" onclick=""></i>
+            <i class="far fa-hand-paper" title="paper" id="computerPaper" onclick=""></i>
+            <i class="far fa-hand-scissors" title="scissors" id="computerScissors" onclick=""></i>
+            <i class="far fa-hand-lizard" title="Lizard" id="computerLizard" onclick=""></i>
+            <i class="far fa-hand-spock" title="Spock" id="computerSpock" onclick=""></i>
+
+         </div>
+         <!-- reset icon -->
+         <i class="fas fa-sync-alt reset-icon" title="Reset" onclick=""></i> 
+         
+         <!-- reset text -->
+         <div class="result-container">
+            <h3 class="result-text" id="resultText">
+                You Won !!!
+            </h3>
+         </div>
+
     </div>
 
 
