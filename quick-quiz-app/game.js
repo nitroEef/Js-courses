@@ -84,9 +84,9 @@ const getNewQuestion = () => {
     question.innerText = currentQuestion.question
     // console.log(currentQuestion);
 
-    // if we select a choice, if it is right or wrong, if accepting anser is trueit shoild bring new question 
+    // if we select a choice, if it is right or wrong, if accepting anser is trueit should bring new question 
     
-//for each of te choices is what we want to talj aout,, we now have 
+//for each of the choices is what we want to talkq\ aout,, we now have 
 // a numer as a variable which will attach to each choice 
 
     choices.forEach((choice) => {
