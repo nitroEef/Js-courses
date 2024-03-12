@@ -1,8 +1,6 @@
-
-
 const playerScoreEl = document.getElementById("playerScore");
 const playerChoiceEl = document.getElementById("playerChoice");
-const computerScoreE1 = document.getElementById("computerScore");
+const computerScoreEl = document.getElementById("computerScore");
 const computerChoiceEl = document.getElementById("computerChoice");
 const resultText = document.getElementById("resultText");
 
@@ -18,15 +16,15 @@ const computerSpock = document.getElementById("computerSpock");
 const computerScissors = document.getElementById("computerScissors");
 const computerLizard = document.getElementById("computerLizard");
 
-const allGameIcon = document.querySelectorAll(".far")
+const allGameIcons = document.querySelectorAll(".far")
 
 
-const choice = {
-    rock: {name: "rock", defeats: ["scissors", "lizard"]},
-    rock: {name: "paper", defeats: ["rocks", "spock"]},
-    rock: {name: "scissors", defeats: ["paper", "lizard"]},
-    rock: {name: "lizard", defeats: ["paper", "spock"]},
-    rock: {name: "rock", defeats: ["scissors", "rock"]},
+const choices = {
+    rock: {name: "rock", defeats: ['scissors', 'lizard']},
+    paper: {name: "paper", defeats: ['rocks', 'spock']},
+    scissors: {name: "scissors", defeats: ['paper', 'lizard']},
+    lizard: {name: "lizard", defeats: ['paper', 'spock']},
+    spock: {name: "spock", defeats: ['scissors', 'rock']},
 }
 
 
@@ -42,7 +40,7 @@ let computerScoreNumber = '';
 
 // reset all selected icons 
 function resetSelected(){
-    allGameIcon.forEach((icon) => {
+    allGameIcons.forEach((icon) => {
         icon.classList.remove('selected')
     })
 }
@@ -67,8 +65,25 @@ function computerRandomChoice(){
 }
 
 // updtiing the scores 
-function updateScores(playerChoice) {
-console.log(playerChoice, computerChoice)
+function updateScores(playerChoice){
+    console.log(playerChoice, computerChoice)
+    if(playerChoice === computerChoice){
+        resultText.textContent = "it is a tie"
+    }
+    else{
+        const choice = choices[playerChoice]
+        console.log(choice.defeats.indexOf(computerChoice))
+
+    if(choice.defeats.indexOf(computerChoice) > -1){
+        resultText.textContent = 'you won';
+        playerScoreNumber++
+        playerScoreEl.textContent = playerScoreNumber
+    }else{
+        resultText.textContent = 'you lost'
+        computerScoreNumber++
+        computerScoreEl.textContent = computerScoreNumber
+    }
+    }
 }
 
 //call functions to process turn
@@ -83,7 +98,7 @@ function checkResult(playerChoice){
 }
 
 function select(playerChoice){
-    checkResult();
+    checkResult(playerChoice);
 
 
     switch(playerChoice){
