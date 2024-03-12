@@ -38,7 +38,7 @@ let computerChoice = '';
 let playerScoreNumber = '';
 let computerScoreNumber = '';
 
-// reset all selected icons 
+// reset all selected icons  ..to remove the black color from the inactive selected
 function resetSelected(){
     allGameIcons.forEach((icon) => {
         icon.classList.remove('selected')
