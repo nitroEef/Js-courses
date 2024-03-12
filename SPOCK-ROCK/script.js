@@ -44,6 +44,22 @@ function resetSelected(){
         icon.classList.remove('selected')
     })
 }
+
+//game reset
+function resetAll(){
+    playerScoreNumber = 0;
+    computerScoreNumber = 0;
+    playerScoreEl.textContent = playerScoreNumber
+    computerScoreEl.textContent = computerScoreNumber
+    playerChoiceEl.textContent = ''
+    computerChoiceEl.textContent = ''
+    resultText.textContent = ''
+    resetSelected()
+
+}
+
+
+
 //random computer choice
 function computerRandomChoice(){
     const computerChoiceNumber = Math.random();
@@ -155,3 +171,6 @@ function displayComputerChoice(){
         
     }
 }
+
+//reset game to initial state
+resetAll()
