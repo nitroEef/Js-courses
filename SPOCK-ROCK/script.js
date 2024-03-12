@@ -118,7 +118,7 @@ function select(playerChoice){
 
 
     switch(playerChoice){
-        case 'roch':
+        case 'rock':
             playerRock.classList.add('selected');
             playerChoiceEl.textContent ='---Rock'
             break;
