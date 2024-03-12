@@ -42,7 +42,9 @@ let computerScoreNumber = '';
 function resetSelected(){
     allGameIcons.forEach((icon) => {
         icon.classList.remove('selected')
-    })
+    });
+	stopConfettiInner()
+	removeConfettiInner()
 }
 
 //game reset
@@ -91,6 +93,7 @@ function updateScores(playerChoice){
         console.log(choice.defeats.indexOf(computerChoice))
 
     if(choice.defeats.indexOf(computerChoice) > -1){
+		startConfetti()
         resultText.textContent = 'you won';
         playerScoreNumber++
         playerScoreEl.textContent = playerScoreNumber
@@ -268,7 +271,7 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 	}
 
 	function removeConfettiInner() {
-		stopConfetti();
+		stopConfettiInner();
 		particles = [];
 	}
 
@@ -319,4 +322,3 @@ var removeConfetti; //call to stop the confetti animation and remove all confett
 			}
 		}
 	}
-startConfetti()
