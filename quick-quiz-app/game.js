@@ -20,7 +20,8 @@ let availableQuestion = [];
 
 let questions = [];
 
-fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple').then((res) => {
+fetch('https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple')
+.then((res) => {
   return res.json();
 }).then((loadingQuestions) => {
   questions = loadingQuestions.results.map((loadingQuestion) => {
@@ -73,7 +74,7 @@ const getNewQuestion = () => {
 
     if (availableQuestion.length === 0 || questionCounter >= MAX_QUESTION){
         localStorage.setItem("mostRecentScore", score) //whatever we score is going to be store into the local storage as our most recent score ,  mostrecentscore is just any name which will be the key and the value of score wil be anything that we scored
-        return window.location.assign("./end.html")
+        return window.location.assign("./end.html") //and this will return us to the end 
     }
     questionCounter++; //increasing the question by one
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTION} `; //to display whatever we want in our progresstext...the total number of question we are going to answer
@@ -111,7 +112,7 @@ choices.forEach((choice) => {
 
         // whatever we are clciking in one of the option,
         //  will be our selectedchoice at that time lineeightysix
-
+ 
         const selectedChoice = e.target; 
         const selectedAnswer = selectedChoice.dataset["number"];
         const classToApply = selectedAnswer == currentQuestion.answer ?  "correct" : "inCorrect";
